@@ -30,7 +30,7 @@
 -(void)testNSinvocatonOperation{
     NSInvocationOperation* opera=[[NSInvocationOperation alloc] initWithTarget:self selector:@selector(op) object:nil];
     NSOperationQueue* quee=[[NSOperationQueue alloc] init];
-    quee.maxConcurrentOperationCount=5;
+    quee.maxConcurrentOperationCount=4;
     [quee addOperation:opera];
 }
 

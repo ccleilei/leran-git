@@ -7,30 +7,32 @@
 //
 
 #import "MyWorkerThread.h"
-
+#import "RunLoopSource.h"
 @implementation MyWorkerThread
+//端口源
 -(void)LaunchThreadWithPort:(id)inData
 
 {
-    remotePort= (NSPort *)inData;
+    _remotePort= (NSPort *)inData;
     
     [[NSThread currentThread] setName:@"MyWorkerClassThread"];
-    [[NSRunLoop currentRunLoop] run];
-    myPort = [NSMachPort port];
-    [myPort setDelegate:self];
-    
-    [[NSRunLoop currentRunLoop] addPort:myPort forMode:NSDefaultRunLoopMode];
    
-     [self sendPortMessage];
+    _myPort = [NSPort port];
+    [_myPort setDelegate:self];
+    [[NSRunLoop currentRunLoop] addPort:_myPort forMode:NSRunLoopCommonModes];
+    [self sendPortMessage];
+    [[NSRunLoop currentRunLoop] run];
 }
+
 -(void)sendPortMessage{
     NSMutableArray *array  =[[NSMutableArray alloc]initWithArray:@[@"1",@"2"]];
   //  NSString* st=@"hello";
     //发送消息到主线程，操作1
-    [remotePort sendBeforeDate:[NSDate date]
+    NSLog(@"子线程发送端口消息 %@",[NSThread currentThread]);
+    [_remotePort sendBeforeDate:[NSDate date]
                          msgid:10
                     components:array
-                          from:myPort
+                          from:_myPort
                       reserved:0];
 }
 #pragma mark - NSPortDelegate
@@ -45,17 +47,17 @@
 - (void)handlePortMessage:(NSPortMessage *)message{
     NSLog(@"接收到父线程的消息...\n");
     
-    //    unsigned int msgid = [message msgid];
-    //    NSPort* distantPort = nil;
-    //
-    //    if (msgid == kCheckinMessage)
-    //    {
-    //        distantPort = [message sendPort];
-    //
-    //    }
-    //    else if(msgid == kExitMessage)
-    //    {
-    //        CFRunLoopStop((__bridge CFRunLoopRef)[NSRunLoop currentRunLoop]);
-    //    }
+//        unsigned int msgid = [message msgid];
+//        NSPort* distantPort = nil;
+//    
+//        if (msgid == kCheckinMessage)
+//        {
+//            distantPort = [message sendPort];
+//    
+//        }
+//        else if(msgid == kExitMessage)
+//        {
+//            CFRunLoopStop((__bridge CFRunLoopRef)[NSRunLoop currentRunLoop]);
+//        }
 }
 @end

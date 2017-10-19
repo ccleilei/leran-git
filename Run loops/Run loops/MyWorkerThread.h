@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MyWorkerThread : NSObject<NSMachPortDelegate> {
-    NSPort *remotePort;
-    NSPort *myPort;
-}
+@interface MyWorkerThread : NSObject<NSPortDelegate> 
+@property (nonatomic, strong)  NSPort *remotePort;
+@property (nonatomic, strong)  NSPort *myPort;
+-(void)sendPortMessage;
 @end

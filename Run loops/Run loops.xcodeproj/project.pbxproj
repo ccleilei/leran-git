@@ -17,6 +17,10 @@
 		AB7FB3B91D7D4F7700536B47 /* Run_loopsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7FB3B81D7D4F7700536B47 /* Run_loopsUITests.m */; };
 		AB7FB3C81D7EAC7D00536B47 /* RunLoopSource.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7FB3C71D7EAC7D00536B47 /* RunLoopSource.m */; };
 		AB7FB3CB1D8015F400536B47 /* MyWorkerThread.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7FB3CA1D8015F400536B47 /* MyWorkerThread.m */; };
+		ABB4838E1F9762FD00747FE3 /* yellowView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB4838D1F9762FD00747FE3 /* yellowView.m */; };
+		ABB483911F97672200747FE3 /* blueViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483901F97672200747FE3 /* blueViewButton.m */; };
+		ABB483941F976C3000747FE3 /* rRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483931F976C3000747FE3 /* rRedView.m */; };
+		ABB483971F98A8BA00747FE3 /* coreAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB483961F98A8BA00747FE3 /* coreAnimateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,15 @@
 		AB7FB3C71D7EAC7D00536B47 /* RunLoopSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopSource.m; sourceTree = "<group>"; };
 		AB7FB3C91D8015F400536B47 /* MyWorkerThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWorkerThread.h; sourceTree = "<group>"; };
 		AB7FB3CA1D8015F400536B47 /* MyWorkerThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWorkerThread.m; sourceTree = "<group>"; };
+		ABB4838C1F9762FD00747FE3 /* yellowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = yellowView.h; sourceTree = "<group>"; };
+		ABB4838D1F9762FD00747FE3 /* yellowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yellowView.m; sourceTree = "<group>"; };
+		ABB4838F1F97672200747FE3 /* blueViewButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blueViewButton.h; sourceTree = "<group>"; };
+		ABB483901F97672200747FE3 /* blueViewButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blueViewButton.m; sourceTree = "<group>"; };
+		ABB483921F976C3000747FE3 /* rRedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rRedView.h; sourceTree = "<group>"; };
+		ABB483931F976C3000747FE3 /* rRedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rRedView.m; sourceTree = "<group>"; };
+		ABB483951F98A8BA00747FE3 /* coreAnimateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coreAnimateViewController.h; sourceTree = "<group>"; };
+		ABB483961F98A8BA00747FE3 /* coreAnimateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreAnimateViewController.m; sourceTree = "<group>"; };
+		ABB483991F98AD4400747FE3 /* p@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +100,7 @@
 		AB7FB3871D7D4F7700536B47 = {
 			isa = PBXGroup;
 			children = (
+				ABB483981F98AD4400747FE3 /* source */,
 				AB7FB3921D7D4F7700536B47 /* Run loops */,
 				AB7FB3AC1D7D4F7700536B47 /* Run loopsTests */,
 				AB7FB3B71D7D4F7700536B47 /* Run loopsUITests */,
@@ -111,6 +125,14 @@
 				AB7FB3971D7D4F7700536B47 /* AppDelegate.m */,
 				AB7FB3991D7D4F7700536B47 /* ViewController.h */,
 				AB7FB39A1D7D4F7700536B47 /* ViewController.m */,
+				ABB483951F98A8BA00747FE3 /* coreAnimateViewController.h */,
+				ABB483961F98A8BA00747FE3 /* coreAnimateViewController.m */,
+				ABB4838C1F9762FD00747FE3 /* yellowView.h */,
+				ABB4838D1F9762FD00747FE3 /* yellowView.m */,
+				ABB4838F1F97672200747FE3 /* blueViewButton.h */,
+				ABB483901F97672200747FE3 /* blueViewButton.m */,
+				ABB483921F976C3000747FE3 /* rRedView.h */,
+				ABB483931F976C3000747FE3 /* rRedView.m */,
 				AB7FB3C61D7EAC7D00536B47 /* RunLoopSource.h */,
 				AB7FB3C71D7EAC7D00536B47 /* RunLoopSource.m */,
 				AB7FB3C91D8015F400536B47 /* MyWorkerThread.h */,
@@ -148,6 +170,14 @@
 				AB7FB3BA1D7D4F7700536B47 /* Info.plist */,
 			);
 			path = "Run loopsUITests";
+			sourceTree = "<group>";
+		};
+		ABB483981F98AD4400747FE3 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				ABB483991F98AD4400747FE3 /* p@3x.png */,
+			);
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,6 +247,7 @@
 				TargetAttributes = {
 					AB7FB38F1D7D4F7700536B47 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7KW6E4PC7H;
 					};
 					AB7FB3A81D7D4F7700536B47 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -280,10 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB483911F97672200747FE3 /* blueViewButton.m in Sources */,
 				AB7FB3CB1D8015F400536B47 /* MyWorkerThread.m in Sources */,
 				AB7FB39B1D7D4F7700536B47 /* ViewController.m in Sources */,
+				ABB4838E1F9762FD00747FE3 /* yellowView.m in Sources */,
 				AB7FB3981D7D4F7700536B47 /* AppDelegate.m in Sources */,
+				ABB483941F976C3000747FE3 /* rRedView.m in Sources */,
 				AB7FB3C81D7EAC7D00536B47 /* RunLoopSource.m in Sources */,
+				ABB483971F98A8BA00747FE3 /* coreAnimateViewController.m in Sources */,
 				AB7FB3951D7D4F7700536B47 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +458,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7KW6E4PC7H;
 				INFOPLIST_FILE = "Run loops/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xfzd.Run-loops";
@@ -434,6 +471,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7KW6E4PC7H;
 				INFOPLIST_FILE = "Run loops/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xfzd.Run-loops";
@@ -508,6 +547,7 @@
 				AB7FB3BF1D7D4F7800536B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB7FB3C01D7D4F7800536B47 /* Build configuration list for PBXNativeTarget "Run loopsTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +556,7 @@
 				AB7FB3C21D7D4F7800536B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB7FB3C31D7D4F7800536B47 /* Build configuration list for PBXNativeTarget "Run loopsUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +565,7 @@
 				AB7FB3C51D7D4F7800536B47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

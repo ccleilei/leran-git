@@ -9,16 +9,45 @@
 #import "AppDelegate.h"
 #import "RunLoopSource.h"
 @interface AppDelegate ()
-
+{
+    NSMutableArray *sourcesToPing;
+}
 @end
 
 @implementation AppDelegate
 
+- (void)registerSource:(RunLoopContext*)sourceInfo
+{
+    if (!sourcesToPing) {
+        sourcesToPing = [NSMutableArray arrayWithCapacity:0];
+    }
+    [sourcesToPing addObject:sourceInfo];
+}
+
+- (void)removeSource:(RunLoopContext*)sourceInfo
+{
+    id    objToRemove = nil;
+    
+    for (RunLoopContext* context in sourcesToPing)
+    {
+        if ([context isEqual:sourceInfo])
+        {
+            objToRemove = context;
+            break;
+        }
+    }
+    
+    if (objToRemove)
+        [sourcesToPing removeObject:objToRemove];
+}
+
+- (void)reWake {
+    RunLoopContext *sourceInfor = [sourcesToPing objectAtIndex:0];
+    [sourceInfor.source fireAllCommandsOnRunLoop:sourceInfor.runLoop];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    RunLoopSource* sour=[[RunLoopSource alloc] init];
-    
+    // Override point for customization after application launc
     return YES;
 }
 
